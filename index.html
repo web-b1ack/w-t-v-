@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Barra de búsqueda</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="reset.css">
+</head>
+<body>
+	<header>
+		<h1>Barra de búsqueda</h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="peliculas.html"></a>peliculas</li>
+				<li><a href="series.html">Series</a></li>
+			</ul>
+			<form id="search-form">
+				<label for="search-input">Buscar:</label>
+				<input type="text" id="search-input" name="q" placeholder="Buscar...">
+				<button type="submit" aria-label="Buscar">Buscar</button>
+				<button type="reset">Restablecer</button>
+			</form>
+		</nav>
+	</header>
+	<main>
+		<h2>Bienvenido</h2>
+		<p>Este es un ejemplo de una página web con una barra de búsqueda.</p>
+	</main>
+	<footer>
+		<p>Derechos reservados © 2023</p>
+	</footer>
+	<script>
+		const form = document.getElementById("search-form");
+		const input = document.getElementById("search-input");
+		const errorMessage = "Por favor, ingrese un término de búsqueda.";
+		
+		form.addEventListener("submit", function(event) {
+			event.preventDefault();
+			if (input.value.trim() === "") {
+				alert(errorMessage);
+				return;
+			}
+			const query = input.value;
+			alert("Buscando por: " + query);
+			// Aquí se puede agregar la lógica para realizar la búsqueda en la base de datos o en otro sitio web
+		});
+	</script>
+</body>
+</html>

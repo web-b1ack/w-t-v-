@@ -1,0 +1,66 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box; /* Se agrega esta propiedad para incluir padding y border en el width y height */
+}
+
+body {
+	background-color: #f2f2f2;
+	font-family: Arial, sans-serif;
+}
+
+header {
+	background-color: #333333;
+	color: #ffffff;
+	padding: 20px;
+	display: flex; /* Se agrega esta propiedad para poder alinear el contenido del header */
+	justify-content: space-between; /* Se agrega esta propiedad para separar la barra de búsqueda de los enlaces */
+	align-items: center; /* Se agrega esta propiedad para alinear verticalmente el contenido del header */
+}
+
+nav ul {
+	list-style: none; /* Se agrega esta propiedad para quitar los bullets de la lista */
+	display: flex; /* Se agrega esta propiedad para poder alinear horizontalmente los enlaces */
+}
+
+nav ul li {
+	margin-left: 20px;
+}
+
+nav ul li a {
+	color: #ffffff;
+	text-decoration: none;
+	padding: 10px; /* Se agrega este padding para aumentar el tamaño del área de clic del enlace */
+}
+
+nav form {
+	margin-top: 10px;
+	display: flex; /* Se agrega esta propiedad para alinear horizontalmente la barra de búsqueda y el botón */
+}
+
+nav form input[type="text"] {
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+}
+
+nav form button[type="submit"] {
+	padding: 10px;
+	background-color: #039ee6;
+	color: #ffffff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-left: 10px; /* Se agrega este margen para separar el botón de la barra de búsqueda */
+}
+
+main {
+	padding: 20px;
+}
+
+footer {
+	background-color: #333333;
+	color: #ffffff;
+	text-align: center;
+	padding: 10px;
+}

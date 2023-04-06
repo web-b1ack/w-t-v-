@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Página de películas</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="reset.css">
+  </head>
+  <body>
+    <header>
+      <h1>Página de películas</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="peliculas.html">Películas</a></li>
+          <li><a href="series.html">Series</a></li>
+        </ul>
+        <form id="search-form">
+          <label for="search-input">Buscar:</label>
+          <input type="text" id="search-input" name="q" placeholder="Buscar...">
+          <button type="submit" aria-label="Buscar">Buscar</button>
+          <button type="reset">Restablecer</button>
+        </form>
+      </nav>
+    </header>
+    <main>
+      <h2>Películas</h2>
+      <div style="padding:56.25% 0 0 0;position:relative;">
+       <iframe src="https://player.vimeo.com/video/815196842?h=55aff4b769&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="video1.mp4"></iframe>
+
+      </div>
+      <p>Aquí puedes agregar información adicional sobre las películas.</p>
+      <video width="320" height="240" controls>
+        <source src="movie.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+        Tu navegador no soporta la etiqueta video.
+      </video>
+      <video width="320" height="240" controls>
+        <source src="movie2.mp4" type="video/mp4">
+        <source src="movie2.ogg" type="video/ogg">
+        Tu navegador no soporta la etiqueta video.
+      </video>
+      <video width="320" height="240" controls>
+        <source src="movie3.mp4" type="video/mp4">
+        <source src="movie3.ogg" type="video/ogg">
+        Tu navegador no soporta la etiqueta video.
+      </video>
+    </main>
+    <footer>
+      <p>Derechos reservados © 2023</p>
+    </footer>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <script>
+      const form = document.getElementById("search-form");
+      const input = document.getElementById("search-input");
+      const errorMessage = "Por favor, ingrese un término de búsqueda.";
+
+      form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        if (input.value.trim() === "") {
+          alert(errorMessage);
+          return;
+        }
+        const query = input.value;
+        alert("Buscando por: " + query);
+        // Aquí se puede agregar la lógica para realizar la búsqueda en la base de datos o en otro sitio web
+      });
+    </script>
+  </body>
+</html>
